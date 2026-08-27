@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/educational-explainer-video/production-brief.schema.json",
+  "title": "Educational Explainer Video Production Brief",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project",
+    "aspect",
+    "fps",
+    "captions",
+    "semanticUnits",
+    "visualElements",
+    "scenes",
+    "sampleDecision",
+    "verificationItems"
+  ],
+  "properties": {
+    "project": { "$ref": "#/$defs/project" },
+    "aspect": { "enum": ["16:9", "9:16"] },
+    "fps": { "type": "integer", "minimum": 1 },
+    "captions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/caption" }
+    },
+    "semanticUnits": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/semanticUnit" }
+    },
+    "visualElements": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/visualElement" }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scene" }
+    },
+    "sampleDecision": { "$ref": "#/$defs/sampleDecision" },
+    "verificationItems": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/verificationItem" }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    },
+    "cueIdList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "integer", "minimum": 1 }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "sourceFiles", "audioContract"],
+      "properties": {
+        "title": { "$ref": "#/$defs/nonEmptyString" },
+        "sourceFiles": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/sourceFile" }
+        },
+        "audioContract": { "enum": ["silent", "required"] }
+      }
+    },
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "$ref": "#/$defs/nonEmptyString" },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "caption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text", "startMs", "endMs"],
+      "properties": {
+        "id": { "type": "integer", "minimum": 1 },
+        "text": { "$ref": "#/$defs/nonEmptyString" },
+        "startMs": { "type": "integer", "minimum": 0 },
+        "endMs": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "semanticUnit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sourceText",
+        "sourceCueIds",
+        "startMs",
+        "endMs",
+        "communicativeFunction",
+        "entities",
+        "actions",
+        "concepts",
+        "relations",
+        "facts",
+        "viewerTakeaway"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/nonEmptyString" },
+        "sourceText": { "$ref": "#/$defs/nonEmptyString" },
+        "sourceCueIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "integer", "minimum": 1 }
+        },
+        "startMs": { "type": "integer", "minimum": 0 },
+        "endMs": { "type": "integer", "minimum": 1 },
+        "communicativeFunction": {
+          "enum": [
+            "question",
+            "explanation",
+            "reversal",
+            "example",
+            "comparison",
+            "conclusion",
+            "action-advice"
+          ]
+        },
+        "entities": { "$ref": "#/$defs/stringList" },
+        "actions": { "$ref": "#/$defs/stringList" },
+        "concepts": { "$ref": "#/$defs/stringList" },
+        "relations": { "$ref": "#/$defs/stringList" },
+        "facts": { "$ref": "#/$defs/stringList" },
+        "viewerTakeaway": { "$ref": "#/$defs/nonEmptyString" }
+      }
+    },
+    "visualElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "sourcePhrase",
+        "explanatoryRole",
+        "visualForm",
+        "stateChanges",
+        "sceneIds",
+        "evidenceStatus",
+        "originalityNote",
+        "layer"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/nonEmptyString" },
+        "kind": {
+          "enum": [
+            "character",
+            "object",
+            "environment",
+            "text",
+            "formula",
+            "data",
+            "path",
+            "container",
+            "symbol",
+            "other"
+          ]
+        },
+        "sourcePhrase": { "type": "string" },
+        "explanatoryRole": { "type": "string" },
+        "visualForm": { "$ref": "#/$defs/nonEmptyString" },
+        "stateChanges": { "$ref": "#/$defs/stringList" },
+        "sceneIds": { "$ref": "#/$defs/stringList" },
+        "evidenceStatus": { "enum": ["verified", "pending", "not-applicable"] },
+        "originalityNote": { "$ref": "#/$defs/nonEmptyString" },
+        "layer": { "enum": ["primary", "supporting", "decorative"] }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "startFrame",
+        "endFrame",
+        "cueIds",
+        "semanticUnitIds",
+        "visualThesis",
+        "primaryElements",
+        "supportingElements",
+        "enterState",
+        "exitState",
+        "transitionIn",
+        "transitionOut",
+        "continuityAnchor",
+        "aspectOverrides",
+        "reviewFrames",
+        "status"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/nonEmptyString" },
+        "startFrame": { "type": "integer", "minimum": 0 },
+        "endFrame": { "type": "integer", "minimum": 1 },
+        "cueIds": { "$ref": "#/$defs/cueIdList" },
+        "semanticUnitIds": { "$ref": "#/$defs/stringList" },
+        "visualThesis": { "$ref": "#/$defs/nonEmptyString" },
+        "primaryElements": { "$ref": "#/$defs/stringList" },
+        "supportingElements": { "$ref": "#/$defs/stringList" },
+        "enterState": { "$ref": "#/$defs/nonEmptyString" },
+        "exitState": { "$ref": "#/$defs/nonEmptyString" },
+        "transitionIn": { "enum": ["direct", "hold"] },
+        "transitionOut": { "enum": ["direct", "hold"] },
+        "continuityAnchor": { "$ref": "#/$defs/nonEmptyString" },
+        "aspectOverrides": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "16:9": { "$ref": "#/$defs/nonEmptyString" },
+            "9:16": { "$ref": "#/$defs/nonEmptyString" }
+          }
+        },
+        "reviewFrames": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 0 }
+        },
+        "status": { "enum": ["draft", "approved", "rendered"] }
+      }
+    },
+    "sampleDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "criteria", "reason", "deliverable"],
+      "properties": {
+        "level": { "enum": ["A", "B", "C"] },
+        "criteria": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "new-topic",
+              "unapproved-visual-system",
+              "many-new-elements",
+              "complex-metaphor",
+              "same-approved-series",
+              "low-risk-reuse"
+            ]
+          }
+        },
+        "reason": { "$ref": "#/$defs/nonEmptyString" },
+        "deliverable": {
+          "enum": ["20-30s-sample", "8-12s-micro-sample", "keyframes", "direct-full"]
+        }
+      }
+    },
+    "verificationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "description", "status"],
+      "properties": {
+        "id": { "$ref": "#/$defs/nonEmptyString" },
+        "description": { "$ref": "#/$defs/nonEmptyString" },
+        "status": { "enum": ["pending", "verified"] },
+        "targetElementIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/nonEmptyString" }
+        }
+      }
+    }
+  }
+}

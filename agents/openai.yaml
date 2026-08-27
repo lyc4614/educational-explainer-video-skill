@@ -1,0 +1,8 @@
+interface:
+  display_name: "Educational Explainer Video"
+  short_description: "Turn educational scripts into semantic explainer videos"
+  default_prompt: "Use $educational-explainer-video to turn this educational script or SRT into an original, source-traceable explainer video."
+  brand_color: "#2F9271"
+
+policy:
+  allow_implicit_invocation: true

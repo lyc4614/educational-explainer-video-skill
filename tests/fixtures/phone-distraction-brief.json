@@ -1,0 +1,127 @@
+{
+  "project": {
+    "title": "写作业被手机打断",
+    "sourceFiles": [
+      {
+        "path": "tests/fixtures/phone-distraction.srt",
+        "sha256": "944dd17a0ce33b28d6fb7134f2e01da7b7b6f67681c8e5616b681f065e88ba75"
+      }
+    ],
+    "audioContract": "silent"
+  },
+  "aspect": "9:16",
+  "fps": 30,
+  "captions": [
+    {
+      "id": 1,
+      "text": "孩子刚开始写作业，手机通知一响，注意力就被拉走。",
+      "startMs": 0,
+      "endMs": 4000
+    }
+  ],
+  "semanticUnits": [
+    {
+      "id": "unit-01",
+      "sourceText": "孩子刚开始写作业，手机通知一响，注意力就被拉走。",
+      "sourceCueIds": [1],
+      "startMs": 0,
+      "endMs": 4000,
+      "communicativeFunction": "explanation",
+      "entities": ["child", "phone", "task-list", "clock"],
+      "actions": ["notification-arrives", "attention-switches"],
+      "concepts": ["attention-switching"],
+      "relations": ["notification-causes-switch"],
+      "facts": [],
+      "viewerTakeaway": "通知打断正在执行的作业任务"
+    }
+  ],
+  "visualElements": [
+    {
+      "id": "child",
+      "kind": "character",
+      "sourcePhrase": "孩子刚开始写作业",
+      "explanatoryRole": "展示正在执行作业任务的主体",
+      "visualForm": "character",
+      "stateChanges": ["writing", "attention-diverted"],
+      "sceneIds": ["scene-01"],
+      "evidenceStatus": "not-applicable",
+      "originalityNote": "使用原创几何人物造型",
+      "layer": "primary"
+    },
+    {
+      "id": "phone",
+      "kind": "object",
+      "sourcePhrase": "手机通知一响",
+      "explanatoryRole": "触发注意切换的打断源",
+      "visualForm": "device",
+      "stateChanges": ["idle", "notification-active"],
+      "sceneIds": ["scene-01"],
+      "evidenceStatus": "not-applicable",
+      "originalityNote": "使用原创手机与通知图形",
+      "layer": "primary"
+    },
+    {
+      "id": "clock",
+      "kind": "object",
+      "sourcePhrase": "刚开始",
+      "explanatoryRole": "标记任务启动后很快发生打断",
+      "visualForm": "icon",
+      "stateChanges": ["start", "interrupted"],
+      "sceneIds": ["scene-01"],
+      "evidenceStatus": "not-applicable",
+      "originalityNote": "使用原创时钟图标",
+      "layer": "supporting"
+    },
+    {
+      "id": "task-list",
+      "kind": "object",
+      "sourcePhrase": "写作业",
+      "explanatoryRole": "具象化孩子当前正在执行的任务",
+      "visualForm": "task-card",
+      "stateChanges": ["active", "paused"],
+      "sceneIds": ["scene-01"],
+      "evidenceStatus": "not-applicable",
+      "originalityNote": "使用原创作业清单卡片",
+      "layer": "primary"
+    },
+    {
+      "id": "attention-path",
+      "kind": "path",
+      "sourcePhrase": "注意力就被拉走",
+      "explanatoryRole": "连接手机到孩子并显示注意切换路径",
+      "visualForm": "motion-path",
+      "stateChanges": ["task-focused", "phone-focused"],
+      "sceneIds": ["scene-01"],
+      "evidenceStatus": "not-applicable",
+      "originalityNote": "使用原创动态路径图形",
+      "layer": "primary"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "startFrame": 0,
+      "endFrame": 120,
+      "cueIds": [1],
+      "semanticUnitIds": ["unit-01"],
+      "visualThesis": "手机通知会把注意从正在执行的作业任务上拉走",
+      "primaryElements": ["child", "phone", "task-list", "attention-path"],
+      "supportingElements": ["clock"],
+      "enterState": "child-writing",
+      "exitState": "attention-on-phone",
+      "transitionIn": "direct",
+      "transitionOut": "hold",
+      "continuityAnchor": "attention-path",
+      "aspectOverrides": { "9:16": "vertical stack with task center and phone lower-right" },
+      "reviewFrames": [0, 60, 119],
+      "status": "draft"
+    }
+  ],
+  "sampleDecision": {
+    "level": "A",
+    "criteria": ["new-topic", "unapproved-visual-system"],
+    "reason": "new topic and new semantic element set",
+    "deliverable": "20-30s-sample"
+  },
+  "verificationItems": []
+}
