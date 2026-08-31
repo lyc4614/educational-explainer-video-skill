@@ -2,7 +2,22 @@
 
 ## Intake contract
 
-Before design, register input paths and declared SHA-256 hashes; the manuscript-to-SRT relationship and which source governs timing; approved references and exactly what was approved; target aspect, fps, duration, and audio contract; factual sources and unresolved facts; and the approved output/delivery boundary. Production source paths should be absolute. A portable relative path in `project.sourceFiles` requires an explicit `--source-root`; resolve it under that root, read the source bytes, and compare the actual SHA-256 before production. Record declared paths, absolute resolved paths, hashes, approvals, checks, artifacts, and omissions in the canonical `production-run.json` defined by `qa-and-delivery.md`.
+Before design, register the selected review profile and its basis; input paths and declared SHA-256 hashes; the manuscript-to-SRT relationship and which source governs timing; approved references and exactly what was approved; target aspect, fps, duration, and audio contract; factual sources and unresolved facts; and the approved output/delivery boundary. Production source paths should be absolute. A portable relative path in `project.sourceFiles` requires an explicit `--source-root`; resolve it under that root, read the source bytes, and compare the actual SHA-256 before production. Record declared paths, absolute resolved paths, hashes, approvals, checks, artifacts, and omissions in the canonical `production-run.json` defined by `qa-and-delivery.md`.
+
+## Review profile selection
+
+The review profile controls review density and evidence depth, never final artifact correctness.
+
+| Profile | Select when | Review posture |
+| --- | --- | --- |
+| `standard-efficient` | Routine production on a mature visual system without a strict trigger | Default when unspecified; continue without blocking after announcing it |
+| `strict-audit` | User explicitly selects it or accepts escalation for a strict trigger | Add staged, independent, and denser review evidence |
+
+Honor an explicit choice. When no choice exists and no strict trigger is present, announce `standard-efficient` and proceed. Recommend `strict-audit` and obtain the user's choice before adding its cost when any of these applies: formal client acceptance; regulated or high-stakes claims; a new reusable visual system or shared component; archival traceability; or failures spanning multiple scenes or shared components. A new topic alone does not force `strict-audit`.
+
+The sample risk gates A, B, and C are independent from review profiles. Do not lower a sample gate because `standard-efficient` was selected, and do not infer `strict-audit` from Gate A alone.
+
+Record the result in `production-run.json` as a `review-profile` item in `checks`, using `command` for the profile and selection basis. Preserve the canonical six top-level keys; do not add a one-off schema field.
 
 ## Ordered workflow
 
@@ -13,7 +28,7 @@ Before design, register input paths and declared SHA-256 hashes; the manuscript-
 5. Select the risk gate below and make the required sample or keyframes.
 6. Obtain written approval of every Gate A sample and every Gate B micro-sample/keyframe set before full expansion. Gate C direct-full requires no sample approval, but its brief and keyframes remain mandatory.
 7. Implement tests first, retain the failure-before-fix evidence, and drive all animation from frames.
-8. Render representative stills, both sides of every boundary, and interval/boundary contact sheets for review.
+8. Apply the selected profile's visual scope: render representative stills, both sides of every boundary, and interval/boundary contact sheets at minimum; add dense originals and staged independent reviews only for `strict-audit` or an evidence-driven escalation.
 9. Validate the media contract and perform a full decode; a probe result alone is not completion evidence.
 10. Deliver only a verified, versioned artifact; record its absolute path, SHA-256 hash, approval, checks, and omissions in `production-run.json`.
 

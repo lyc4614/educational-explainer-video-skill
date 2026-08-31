@@ -9,14 +9,19 @@ description: Use when educational scripts, SRT subtitles, or narrated explanatio
 
 Derive the visual system from the current manuscript. Every primary character, object, formula, data point, path, and metaphor must identify its source phrase and explanatory role. Reuse visual grammar and engineering infrastructure, never topic-specific decoration.
 
+## Choose review profile first
+
+Honor any explicit review-profile choice. If the user has not chosen and no strict trigger is present, announce that **Standard Efficient** (`standard-efficient`) is the default and continue without blocking; mention that **Strict Audit** (`strict-audit`) remains available. If a strict trigger is present, recommend Strict Audit and obtain the user's choice before adding its higher-cost review work. Both profiles use the same final technical media gate, and neither profile can bypass the A/B/C sample-risk gate.
+
 ## Start here
 
-1. Register input paths, hashes, approved references, aspect ratio, audio contract, and factual sources.
-2. Read `references/content-to-visual.md` and create a schema-valid `production-brief.json` before scene code.
-3. Read `references/production-workflow.md` to group cues into visual paragraphs and choose sample gate A, B, or C.
-4. Read `references/visual-system.md` for 16:9 or 9:16 layout, continuity, captions, formulas, and motion.
-5. Implement with frame-driven Remotion animation and tests first.
-6. Read `references/qa-and-delivery.md`; deliver only after still, boundary, media-contract, and full-decode checks pass.
+1. Select and announce the review profile using the rules above.
+2. Register input paths, hashes, approved references, aspect ratio, audio contract, and factual sources.
+3. Read `references/content-to-visual.md` and create a schema-valid `production-brief.json` before scene code.
+4. Read `references/production-workflow.md` to group cues into visual paragraphs and choose sample gate A, B, or C.
+5. Read `references/visual-system.md` for 16:9 or 9:16 layout, continuity, captions, formulas, and motion.
+6. Implement with frame-driven Remotion animation and tests first.
+7. Read `references/qa-and-delivery.md`; deliver only after the selected visual-review scope and the shared final media gate pass.
 
 ## Non-negotiable invariants
 

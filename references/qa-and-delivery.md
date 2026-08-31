@@ -2,15 +2,43 @@
 
 ## Automated gate
 
-Run timeline tests, production-brief/schema validation, scene behavior tests, TypeScript checks, and composition registration/contract checks. For each changed behavior, preserve a genuine failure-before-fix run, then run the focused test and full suite after implementation. Automated success does not replace semantic or visual review.
+Run timeline tests, production-brief/schema validation, scene behavior tests, TypeScript checks, and composition registration/contract checks. For each changed behavior, preserve a genuine failure-before-fix run and run focused tests. The selected review profile determines regression frequency, but every source change must be covered before delivery. Automated success does not replace semantic or visual review.
 
 ## Visual gate
 
-Inspect every declared `reviewFrames` entry from every scene and both sides of every scene boundary. Generate interval and boundary contact sheets. Check explanatory hierarchy, legibility, caption safe area, literal formula and verified-data fidelity, character/object state, and causal continuity. For 9:16, explicitly inspect the top, center, and bottom zones, including the reserved caption band.
+Both profiles inspect representative scene states, both sides of every scene boundary, and interval and boundary contact sheets. Strict Audit additionally inspects every declared `reviewFrames` entry at original resolution and denser interval evidence. Check explanatory hierarchy, legibility, caption safe area, literal formula and verified-data fidelity, character/object state, and causal continuity. For 9:16, explicitly inspect the top, center, and bottom zones, including the reserved caption band.
+
+## Standard Efficient
+
+Use `standard-efficient` for routine production on a mature system without a strict trigger.
+
+- Run focused tests for each changed behavior and one final full regression after the last source change.
+- Inspect representative scene frames, both sides of every scene boundary, and compact interval and boundary contact sheets.
+- Use at most one independent final review when independent review is available and authorized; do not schedule per-task duplicate reviewers by default.
+- Do not repeat an already successful check without a new failure signal, source/artifact change, or evidence that the affected scope is broader.
+- Keep the production record concise while still recording the profile, core checks, final artifact, omissions, and approval boundary.
+
+## Strict Audit
+
+Use `strict-audit` after explicit selection or accepted escalation.
+
+- Run staged full regressions at meaningful implementation checkpoints.
+- Inspect every declared `reviewFrames` entry at original resolution, perform dense interval review, and retain expanded boundary/contact-sheet evidence.
+- Perform an independent specification review and an independent quality review; add a final global review when the acceptance context requires it.
+- Preserve detailed append-only evidence for each approval, check, omission, and artifact.
+- Expand re-verification when failures implicate shared components, multiple scenes, or the audit trail itself.
+
+## Shared final media gate
+
+This gate is identical for `standard-efficient` and `strict-audit`. Against the current final artifact and current source, run the fail-closed starter-token scan; verify the versioned path and SHA-256; validate video/audio stream counts, codec, dimensions, fps, frame count, duration tolerance, and audio contract; and perform a full decode. A successful metadata probe is necessary but insufficient.
 
 ## Media gate
 
 Run `scripts/validate-media.mjs` against the declared contract. Verify video/audio stream counts, codecs, dimensions, fps, frame count, duration tolerance, and full decode. A successful metadata probe is necessary but insufficient: truncated or corrupt frames can pass a probe.
+
+## Failure recovery
+
+Any final validation failure blocks delivery. Diagnose and repair the smallest affected scope, run focused checks for that scope, and expand only when shared code or multiple scenes are implicated. If the final artifact changed, rerender it and run the complete shared final media gate against the new bytes. For a media-only parameter failure, do not rerun unrelated semantic, visual, or code checks unless their source or evidence changed. Repeated failures with the same cause require root-cause diagnosis before another render.
 
 ## Delivery gate
 

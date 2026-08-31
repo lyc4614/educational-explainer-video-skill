@@ -167,7 +167,7 @@ test('visual-system defines both aspect contracts and boundary continuity', () =
   assert.ok(continuity.includes('boundary as a pair'));
 });
 
-test('qa-and-delivery defines exhaustive visual review and canonical production-run.json', () => {
+test('qa-and-delivery defines profile-aware visual review and canonical production-run.json', () => {
   const qa = readReference('qa-and-delivery.md');
   const visual = section(qa, 'Visual gate');
   for (const invariant of [
