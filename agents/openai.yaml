@@ -1,7 +1,7 @@
 interface:
   display_name: "Educational Explainer Video"
-  short_description: "Turn educational scripts into semantic explainer videos"
-  default_prompt: "Use $educational-explainer-video to turn this educational script or SRT into an original, source-traceable explainer video."
+  short_description: "Create layered explainer videos from scripts and reusable assets"
+  default_prompt: "Use $educational-explainer-video to turn this educational script or SRT into a source-traceable layered explainer, planning reusable assets, subject motion, and data overlays before rendering."
   brand_color: "#2F9271"
 
 policy:

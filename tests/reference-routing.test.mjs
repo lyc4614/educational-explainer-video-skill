@@ -10,6 +10,7 @@ const expectedReferences = [
   'references/content-to-visual.md',
   'references/production-workflow.md',
   'references/visual-system.md',
+  'references/layered-compositing.md',
   'references/qa-and-delivery.md'
 ];
 const readReference = (name) => readFileSync(join(skillRoot, 'references', name), 'utf8');
@@ -28,7 +29,7 @@ const orderedStep = (markdown, number) => {
   return match[1];
 };
 
-test('SKILL.md routes exactly the four production references and every target exists', () => {
+test('SKILL.md routes the production references and layered mode, and every target exists', () => {
   const skill = readFileSync(join(skillRoot, 'SKILL.md'), 'utf8');
   const routedReferences = [...skill.matchAll(/references\/[a-z-]+\.md/g)].map(
     ([reference]) => reference
