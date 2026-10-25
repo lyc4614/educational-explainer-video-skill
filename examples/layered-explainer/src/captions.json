@@ -1,0 +1,44 @@
+[
+  {
+    "text": "先建立一个独立的学习主体。",
+    "startMs": 600,
+    "endMs": 3000,
+    "confidence": 1,
+    "timestampMs": 1800
+  },
+  {
+    "text": "主体向左停靠，右侧留给数据。",
+    "startMs": 3000,
+    "endMs": 5000,
+    "confidence": 1,
+    "timestampMs": 4000
+  },
+  {
+    "text": "同一口径的类别，用柱形比较。",
+    "startMs": 5000,
+    "endMs": 10000,
+    "confidence": 1,
+    "timestampMs": 7500
+  },
+  {
+    "text": "等间隔的时间观测，用折线保留波动。",
+    "startMs": 10300,
+    "endMs": 15700,
+    "confidence": 1,
+    "timestampMs": 13000
+  },
+  {
+    "text": "单项百分比，要先定义它的整体。",
+    "startMs": 16000,
+    "endMs": 21700,
+    "confidence": 1,
+    "timestampMs": 18850
+  },
+  {
+    "text": "以上均为合成演示数据。",
+    "startMs": 21700,
+    "endMs": 23200,
+    "confidence": 1,
+    "timestampMs": 22450
+  }
+]

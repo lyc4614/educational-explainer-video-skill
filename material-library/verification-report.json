@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "date": "2026-10-26",
+  "status": "PASS",
+  "counts": {
+    "total": 44,
+    "transparent": 28,
+    "scenes": 16,
+    "pngBytes": 68933921
+  },
+  "integrity": {
+    "sourceAndExportByteIdentical": 44,
+    "sourceAndExportSha256Matched": 44,
+    "manifestFormat": "UTF-8; file sorted with en localeCompare; one lowercase SHA-256 + two spaces + relative file + LF per row",
+    "manifestSha256": "2f1502bdef59537acbf2ec975565e19f084a0f52f77f28e8fcf8d88de6071e2d"
+  },
+  "fieldPolicy": {
+    "removedFields": {
+      "sourcePath": "本机绝对源路径，44项均移除",
+      "inspectionReport": "未随包提供的本地检查报告路径，20项均移除"
+    },
+    "rewrittenFields": {
+      "sourceProject": "20项改成描述性的批次名称，不保留源工程路径"
+    },
+    "preservedFields": "原有id/title/file/prompt/tags/type/uses/cautions/sha256/width/height/transparentFraction/bbox/anchor/style/textBaked/created/provenance/batch/role/layerBehavior/inspectionStatus按存在字段逐项深比较一致",
+    "generationRecords": "增加44项公开来源描述；原始生成prompt与2次edit prompt逐字保留；初稿只记录哈希；原始工具回执与本机路径不公开"
+  },
+  "checks": {
+    "schemaAndLocalPath": "PASS; built-in Node verify.cjs",
+    "hashes": "PASS; 44 PNG and 2 overview JPEG",
+    "offlineSearch": "PASS; actual embedded script under Node VM: 2 type filters, 44 ID, 44 title and 189 tag queries",
+    "pixels": "PASS; optional sharp check recomputed width/height, alpha=0 fraction and alpha>=16 bounds for all44",
+    "sourceMetadataPreservation": "PASS; each existing field outside removed/rewritten list compared against source catalog",
+    "publicTextScan": "PASS; all 54 published files scanned for host/user-home paths, user/workspace identifiers and generation receipts; 8 text files; no matches; no symlinks, ZIP or node_modules",
+    "relocation": "PASS; copied to a different parent folder, built and verified with parent as cwd; index HTML identical"
+  },
+  "scope": "技术完整性/路径/检索与像素统计复检；未重复逐图视觉审查，不是内容事实、科学结构、校情、政策或版权的自动认证",
+  "records": [
+    {
+      "id": "learning-01",
+      "file": "assets/learning-01.png",
+      "bytes": 1976222,
+      "sourceSha256": "562c0104bd4da75a0a81be3c50536a12460d9a08cf37dfe9ab4822c190eaf339",
+      "exportSha256": "562c0104bd4da75a0a81be3c50536a12460d9a08cf37dfe9ab4822c190eaf339",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-02",
+      "file": "assets/learning-02.png",
+      "bytes": 1973062,
+      "sourceSha256": "c037266fa867f2d926e7a3666b2f92075709c7dbc4fd3b881e804fc7c3b1c2e6",
+      "exportSha256": "c037266fa867f2d926e7a3666b2f92075709c7dbc4fd3b881e804fc7c3b1c2e6",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-03",
+      "file": "assets/learning-03.png",
+      "bytes": 2214563,
+      "sourceSha256": "5aa954e4e1457ad27ccea57b115be38d5962b03b8c68bb0bcd869dca7bef99a9",
+      "exportSha256": "5aa954e4e1457ad27ccea57b115be38d5962b03b8c68bb0bcd869dca7bef99a9",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-04",
+      "file": "assets/learning-04.png",
+      "bytes": 2245583,
+      "sourceSha256": "9baa97bc786aa56c141e2b2aaf5b97f959a635caeb954c4ff4d6d709dc52f225",
+      "exportSha256": "9baa97bc786aa56c141e2b2aaf5b97f959a635caeb954c4ff4d6d709dc52f225",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-05",
+      "file": "assets/learning-05.png",
+      "bytes": 2202505,
+      "sourceSha256": "55d2a3ebfff0e9325bf2ba7809382bb3b2264bfbddd0345fdbf9774981c7b541",
+      "exportSha256": "55d2a3ebfff0e9325bf2ba7809382bb3b2264bfbddd0345fdbf9774981c7b541",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-06",
+      "file": "assets/learning-06.png",
+      "bytes": 2095587,
+      "sourceSha256": "e4c66821093dd736ed8e4ea1e62cc7375e2c784a22af39b6374b6d1ac9fed672",
+      "exportSha256": "e4c66821093dd736ed8e4ea1e62cc7375e2c784a22af39b6374b6d1ac9fed672",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-07",
+      "file": "assets/learning-07.png",
+      "bytes": 2040466,
+      "sourceSha256": "34ffe159e8c49085383e6d44b8ff210876ee763f3bf8f78167a56cd5fbe79a85",
+      "exportSha256": "34ffe159e8c49085383e6d44b8ff210876ee763f3bf8f78167a56cd5fbe79a85",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-08",
+      "file": "assets/learning-08.png",
+      "bytes": 2373570,
+      "sourceSha256": "bfbc43cfc161541a93247eb5f4616df9cb7299a10cf25f7a6e991503ac48ab60",
+      "exportSha256": "bfbc43cfc161541a93247eb5f4616df9cb7299a10cf25f7a6e991503ac48ab60",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-09",
+      "file": "assets/learning-09.png",
+      "bytes": 2037734,
+      "sourceSha256": "0cb080a7391ad011f44f29e8aeefc924cd1e74427063776a874e44d4f4f897c2",
+      "exportSha256": "0cb080a7391ad011f44f29e8aeefc924cd1e74427063776a874e44d4f4f897c2",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-10",
+      "file": "assets/learning-10.png",
+      "bytes": 1995755,
+      "sourceSha256": "a05e2f72b10561c8e4c9062226f41718b89ae9bac1b9194e901a45f2c1a9b864",
+      "exportSha256": "a05e2f72b10561c8e4c9062226f41718b89ae9bac1b9194e901a45f2c1a9b864",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-11",
+      "file": "assets/learning-11.png",
+      "bytes": 1903014,
+      "sourceSha256": "8b6b5586b9e0e762194cd6ce8dd0ea8e0bc0fddd8c5d6fcc1c0afef6455cc6dc",
+      "exportSha256": "8b6b5586b9e0e762194cd6ce8dd0ea8e0bc0fddd8c5d6fcc1c0afef6455cc6dc",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-12",
+      "file": "assets/learning-12.png",
+      "bytes": 1823221,
+      "sourceSha256": "23713ff733104e02bea18e196bc90a4f495a4f613b5cd12078ab12dacf0dc062",
+      "exportSha256": "23713ff733104e02bea18e196bc90a4f495a4f613b5cd12078ab12dacf0dc062",
+      "byteIdentical": true
+    },
+    {
+      "id": "six-subjects",
+      "file": "assets/six-subjects.png",
+      "bytes": 1991614,
+      "sourceSha256": "0a29fd87106baf1aafb882cb41059fb2f6fe7515c001a6d5335317e624dea017",
+      "exportSha256": "0a29fd87106baf1aafb882cb41059fb2f6fe7515c001a6d5335317e624dea017",
+      "byteIdentical": true
+    },
+    {
+      "id": "pathways",
+      "file": "assets/pathways.png",
+      "bytes": 1813639,
+      "sourceSha256": "b4bba30a8a476515d5e78c17e5185ee3e07362bc1d22c3cca6adccd64fe2c212",
+      "exportSha256": "b4bba30a8a476515d5e78c17e5185ee3e07362bc1d22c3cca6adccd64fe2c212",
+      "byteIdentical": true
+    },
+    {
+      "id": "family",
+      "file": "assets/family.png",
+      "bytes": 1720574,
+      "sourceSha256": "3ef2b7d904be62bc09ba548608882bf1cf9ba1f73b2c6c872c7541948aa4cab9",
+      "exportSha256": "3ef2b7d904be62bc09ba548608882bf1cf9ba1f73b2c6c872c7541948aa4cab9",
+      "byteIdentical": true
+    },
+    {
+      "id": "graduation",
+      "file": "assets/graduation.png",
+      "bytes": 1752006,
+      "sourceSha256": "30535e20ff1084c17d306941bca04e6da8d7d7a0e906ff79d5f03ea9286f7228",
+      "exportSha256": "30535e20ff1084c17d306941bca04e6da8d7d7a0e906ff79d5f03ea9286f7228",
+      "byteIdentical": true
+    },
+    {
+      "id": "exam",
+      "file": "assets/exam.png",
+      "bytes": 1401571,
+      "sourceSha256": "965af56f98508134c96ebdb86066210208b8a58328e4a7e9f65a10e25ccdc0b6",
+      "exportSha256": "965af56f98508134c96ebdb86066210208b8a58328e4a7e9f65a10e25ccdc0b6",
+      "byteIdentical": true
+    },
+    {
+      "id": "school-test",
+      "file": "assets/school-test.png",
+      "bytes": 1015469,
+      "sourceSha256": "024eee311fc25cc283f09650708b00051279d4dfbf9746391fdda818570f350a",
+      "exportSha256": "024eee311fc25cc283f09650708b00051279d4dfbf9746391fdda818570f350a",
+      "byteIdentical": true
+    },
+    {
+      "id": "report",
+      "file": "assets/report.png",
+      "bytes": 1403982,
+      "sourceSha256": "d6c50f3a7a72fdf0478fa9012f21c878aaa12fcfb88022b6d499e1a5dcf21ea2",
+      "exportSha256": "d6c50f3a7a72fdf0478fa9012f21c878aaa12fcfb88022b6d499e1a5dcf21ea2",
+      "byteIdentical": true
+    },
+    {
+      "id": "certificate",
+      "file": "assets/certificate.png",
+      "bytes": 1493389,
+      "sourceSha256": "e3ddc4247b9ac6cfcc44070401b13debd39d92bc332b3b5f064f5ec3d1a5b8c0",
+      "exportSha256": "e3ddc4247b9ac6cfcc44070401b13debd39d92bc332b3b5f064f5ec3d1a5b8c0",
+      "byteIdentical": true
+    },
+    {
+      "id": "gate",
+      "file": "assets/gate.png",
+      "bytes": 991723,
+      "sourceSha256": "63de01a26cca28979d1204decb6abd0908cc42be4ecfe1bfaea7d34fdf752fb0",
+      "exportSha256": "63de01a26cca28979d1204decb6abd0908cc42be4ecfe1bfaea7d34fdf752fb0",
+      "byteIdentical": true
+    },
+    {
+      "id": "planning",
+      "file": "assets/planning.png",
+      "bytes": 1520596,
+      "sourceSha256": "db30c036a8dc992212f1402e28f73611a849794fd0f27e9e3c8f90ae8a56ff0b",
+      "exportSha256": "db30c036a8dc992212f1402e28f73611a849794fd0f27e9e3c8f90ae8a56ff0b",
+      "byteIdentical": true
+    },
+    {
+      "id": "campus-generic-01",
+      "file": "assets/campus-generic-01.png",
+      "bytes": 1580398,
+      "sourceSha256": "cc4847f803cc7d571eb03006ccdfedbb1e0bfad7eb7ca877b68fe793b9d9f577",
+      "exportSha256": "cc4847f803cc7d571eb03006ccdfedbb1e0bfad7eb7ca877b68fe793b9d9f577",
+      "byteIdentical": true
+    },
+    {
+      "id": "stem-workbench-01",
+      "file": "assets/stem-workbench-01.png",
+      "bytes": 1363584,
+      "sourceSha256": "7c1ee2bc9592a1b2ce65711f8ab4566db718ec96c5cbfe3cc1f1e8ff3650dff8",
+      "exportSha256": "7c1ee2bc9592a1b2ce65711f8ab4566db718ec96c5cbfe3cc1f1e8ff3650dff8",
+      "byteIdentical": true
+    },
+    {
+      "id": "student-focus-01",
+      "file": "assets/student-focus-01.png",
+      "bytes": 1109636,
+      "sourceSha256": "602fc1b5e613116924a89621a7085481b30cbd9e08e45568cfd0631618f8080d",
+      "exportSha256": "602fc1b5e613116924a89621a7085481b30cbd9e08e45568cfd0631618f8080d",
+      "byteIdentical": true
+    },
+    {
+      "id": "peer-discussion-01",
+      "file": "assets/peer-discussion-01.png",
+      "bytes": 1548178,
+      "sourceSha256": "dd8f49a52cfe7e0f7fa35f7a1b160edc5fe1d371c367fb7e16ae30ca2c9980ed",
+      "exportSha256": "dd8f49a52cfe7e0f7fa35f7a1b160edc5fe1d371c367fb7e16ae30ca2c9980ed",
+      "byteIdentical": true
+    },
+    {
+      "id": "teacher-explain-01",
+      "file": "assets/teacher-explain-01.png",
+      "bytes": 929018,
+      "sourceSha256": "4b3335c599e45e9cd927c915631335e075a5ab02dea64f8ba1e88c37f6cbc905",
+      "exportSha256": "4b3335c599e45e9cd927c915631335e075a5ab02dea64f8ba1e88c37f6cbc905",
+      "byteIdentical": true
+    },
+    {
+      "id": "error-review-01",
+      "file": "assets/error-review-01.png",
+      "bytes": 1254650,
+      "sourceSha256": "6f9700486045b227b771d2213dd6597375c52cddcf7feff6eb1597bc732641d9",
+      "exportSha256": "6f9700486045b227b771d2213dd6597375c52cddcf7feff6eb1597bc732641d9",
+      "byteIdentical": true
+    },
+    {
+      "id": "time-plan-01",
+      "file": "assets/time-plan-01.png",
+      "bytes": 1112200,
+      "sourceSha256": "37080795a36ab5ad8a30cbe0bef9c3bd377e8ec6ac5798ac8e851100decbde1a",
+      "exportSha256": "37080795a36ab5ad8a30cbe0bef9c3bd377e8ec6ac5798ac8e851100decbde1a",
+      "byteIdentical": true
+    },
+    {
+      "id": "knowledge-structure-01",
+      "file": "assets/knowledge-structure-01.png",
+      "bytes": 1100959,
+      "sourceSha256": "0cf425467f4b262345b92c2978611820c8466ec3c50997dd197f68d27435d3c4",
+      "exportSha256": "0cf425467f4b262345b92c2978611820c8466ec3c50997dd197f68d27435d3c4",
+      "byteIdentical": true
+    },
+    {
+      "id": "subject-choice-01",
+      "file": "assets/subject-choice-01.png",
+      "bytes": 1363110,
+      "sourceSha256": "2e2770f63ca03a0beb1be4592fb5821b9cbde1397c73aa5e5c6102f1e0379e46",
+      "exportSha256": "2e2770f63ca03a0beb1be4592fb5821b9cbde1397c73aa5e5c6102f1e0379e46",
+      "byteIdentical": true
+    },
+    {
+      "id": "science-lab-01",
+      "file": "assets/science-lab-01.png",
+      "bytes": 1224104,
+      "sourceSha256": "f84a0f614980712f84908b43d2716ba51cebfc0e41346bdec87976658a2c825a",
+      "exportSha256": "f84a0f614980712f84908b43d2716ba51cebfc0e41346bdec87976658a2c825a",
+      "byteIdentical": true
+    },
+    {
+      "id": "reading-corner-01",
+      "file": "assets/reading-corner-01.png",
+      "bytes": 1622659,
+      "sourceSha256": "f1cca22b23d1fd4a4d269fad0ab465bbb430c31226a9e190c1bb6b4c383d0372",
+      "exportSha256": "f1cca22b23d1fd4a4d269fad0ab465bbb430c31226a9e190c1bb6b4c383d0372",
+      "byteIdentical": true
+    },
+    {
+      "id": "direction-compass-01",
+      "file": "assets/direction-compass-01.png",
+      "bytes": 1328058,
+      "sourceSha256": "9b66583f86291889491b465e09904325ea387069e46fe6adfad3f9d41d5bb794",
+      "exportSha256": "9b66583f86291889491b465e09904325ea387069e46fe6adfad3f9d41d5bb794",
+      "byteIdentical": true
+    },
+    {
+      "id": "student-question-01",
+      "file": "assets/student-question-01.png",
+      "bytes": 590979,
+      "sourceSha256": "c76b7f2f0eb12842133f207fec4ff544a5be8841f6a94dd9eb2a186d73f383f5",
+      "exportSha256": "c76b7f2f0eb12842133f207fec4ff544a5be8841f6a94dd9eb2a186d73f383f5",
+      "byteIdentical": true
+    },
+    {
+      "id": "student-rest-01",
+      "file": "assets/student-rest-01.png",
+      "bytes": 1235010,
+      "sourceSha256": "e9e985611727e739ca3b7c12a3c72fdb87bd1f806f1155a6a9f4454dbcb4afe9",
+      "exportSha256": "e9e985611727e739ca3b7c12a3c72fdb87bd1f806f1155a6a9f4454dbcb4afe9",
+      "byteIdentical": true
+    },
+    {
+      "id": "phone-parking-01",
+      "file": "assets/phone-parking-01.png",
+      "bytes": 1701822,
+      "sourceSha256": "f7f464c3fa40867ad2a050268a6b67c6b70ff005b6ab7e3eee6e2d4920c2a73e",
+      "exportSha256": "f7f464c3fa40867ad2a050268a6b67c6b70ff005b6ab7e3eee6e2d4920c2a73e",
+      "byteIdentical": true
+    },
+    {
+      "id": "knowledge-puzzle-01",
+      "file": "assets/knowledge-puzzle-01.png",
+      "bytes": 1333299,
+      "sourceSha256": "31261b68378d24ece4aba8b6800fed3e8af2667b1220f602e98d077666a84997",
+      "exportSha256": "31261b68378d24ece4aba8b6800fed3e8af2667b1220f602e98d077666a84997",
+      "byteIdentical": true
+    },
+    {
+      "id": "learning-target-01",
+      "file": "assets/learning-target-01.png",
+      "bytes": 1148301,
+      "sourceSha256": "e4c1ed5f6f6883802730c27d0de9ffc1b3c06e79c4c166b4f9f849def8d137e7",
+      "exportSha256": "e4c1ed5f6f6883802730c27d0de9ffc1b3c06e79c4c166b4f9f849def8d137e7",
+      "byteIdentical": true
+    },
+    {
+      "id": "chemistry-model-01",
+      "file": "assets/chemistry-model-01.png",
+      "bytes": 1002957,
+      "sourceSha256": "811145f2a4dd747f5fb6c3656866186bb6e0dfac11697e733d41db6c0984b9fa",
+      "exportSha256": "811145f2a4dd747f5fb6c3656866186bb6e0dfac11697e733d41db6c0984b9fa",
+      "byteIdentical": true
+    },
+    {
+      "id": "balance-scale-01",
+      "file": "assets/balance-scale-01.png",
+      "bytes": 933095,
+      "sourceSha256": "ebd14b25445960da11ff90d01c213f259baec8d6e0c6124bb0d3b120de6faa43",
+      "exportSha256": "ebd14b25445960da11ff90d01c213f259baec8d6e0c6124bb0d3b120de6faa43",
+      "byteIdentical": true
+    },
+    {
+      "id": "sports-kit-01",
+      "file": "assets/sports-kit-01.png",
+      "bytes": 1628862,
+      "sourceSha256": "85037b6f2d06280a881cae1a67f7ff770b51629dbbbb9bd0d19c28ac19420a13",
+      "exportSha256": "85037b6f2d06280a881cae1a67f7ff770b51629dbbbb9bd0d19c28ac19420a13",
+      "byteIdentical": true
+    },
+    {
+      "id": "dorm-bunk-01",
+      "file": "assets/dorm-bunk-01.png",
+      "bytes": 1649441,
+      "sourceSha256": "d779b5911912a53e3cfec56bacd4e97828a22a8aea94cc5991a32e9c18f9f16e",
+      "exportSha256": "d779b5911912a53e3cfec56bacd4e97828a22a8aea94cc5991a32e9c18f9f16e",
+      "byteIdentical": true
+    },
+    {
+      "id": "exam-kit-01",
+      "file": "assets/exam-kit-01.png",
+      "bytes": 2187756,
+      "sourceSha256": "805a9d0a6ea6765d5d7e3a9d4f22aeeb4d52d72ff73fe8d6896c3b3e10cdd822",
+      "exportSha256": "805a9d0a6ea6765d5d7e3a9d4f22aeeb4d52d72ff73fe8d6896c3b3e10cdd822",
+      "byteIdentical": true
+    }
+  ]
+}

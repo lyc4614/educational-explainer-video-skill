@@ -34,6 +34,12 @@ Honor any explicit review-profile choice. If the user has not chosen and no stri
 - Keep manuscript-specific SVG, characters, objects, and scenes in the current video project, outside this Skill starter.
 - Reuse written approvals within their actual scope. A style approval alone does not approve a new topic; a low-risk refinement of the same approved series does not need repeated style confirmation.
 
+## Bundled project resources
+
+When this repository's material library is available and semantically relevant, inspect `material-library/catalog.json` and the selected record's cautions before reuse. These resources are optional: the current script determines the subjects. Distinguish full scenes from transparent cutouts, and never infer facts from filenames or image details.
+
+Read `docs/工程思想与架构.md` and `docs/从SRT到成片.md` for the implementation path, or `docs/素材与动效复用.md` for reuse decisions. `examples/layered-explainer/README.md` provides a runnable synthetic example; do not copy its demonstration values into real content.
+
 ## Deterministic helpers
 
 Run from a copied Skill directory:

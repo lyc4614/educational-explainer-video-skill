@@ -14,6 +14,39 @@
 - 提供中性的 Remotion starter
 - 验证媒体编码、画幅、帧率、帧数、音轨、时长和完整解码
 
+## 现在仓库里有什么
+
+| 内容 | 入口与用途 |
+| --- | --- |
+| Skill 规范 | [SKILL.md](SKILL.md)，规划、素材、动画、审查与交付规则 |
+| 工程思想 | [工程思想与架构](docs/工程思想与架构.md)，来源驱动、图层分工与确定性动画 |
+| 实现路径 | [从SRT到成片](docs/从SRT到成片.md)，逐阶段输入、产出、命令与验收 |
+| 复用方法 | [素材与动效复用](docs/素材与动效复用.md)，选材、透明边界、图表和连续动作 |
+| 素材库 | [material-library](material-library/README.md)，44张原始PNG：28透明主体、16完整场景，附离线检索页、提示词、用途限制与哈希 |
+| 可运行示例 | [layered-explainer](examples/layered-explainer/README.md)，24秒透明主体与三种数据图动画，使用合成演示数据 |
+| 通用组件与工具 | `assets/`、`scripts/` 和 `tests/`，分层/图表组件、确定性校验与测试 |
+
+下载后可直接打开 `material-library/index.html` 搜索、筛选和预览素材。复用时先看目录记录与使用限制，再按当前文稿选材；图片内容不作为政策或学校数据的证据。
+
+### 先跑一个完整示例
+
+需要 Node.js 22 或更新版本。在仓库根目录执行：
+
+```sh
+cd examples/layered-explainer
+npm ci
+npm run verify
+npm run dev
+```
+
+打开终端显示的 Studio 地址，选择 `LayeredExplainer`。需要导出时执行 `npm run render`。首次安装依赖或获取 Chromium 需要网络；示例不依赖图像生成服务，所有数字均明确标为合成演示数据。参数、改稿入口与验收范围见示例 README。
+
+素材库的文件、哈希和离线目录检查可在仓库根目录执行：
+
+```sh
+node material-library/verify.cjs
+```
+
 ## 安装
 
 ### Git clone
@@ -60,7 +93,7 @@ node scripts/inspect-asset.mjs public/report.png --id report --kind cutout --out
 
 历史分数、门槛和原稿比例的标签在入场期间保持准确，动画只绘制路径、长度或扇区；保留年份、班型、约数和来源属性。融入已认可3D画面时，仅替换预留数据区中的旧卡片，保持主体和字幕连续。
 
-通用几何函数及SVG覆盖层在`assets/chart-primitives/`。调用方提供当前稿件的数据、原始显示标签、时间、尺度和可用区域；不携带本项目学校数据、视频、PNG素材或本机路径。修改后检查变化段与边界，最终MP4仍须完整解码。
+通用几何函数及SVG覆盖层在`assets/chart-primitives/`。调用方提供当前稿件的数据、原始显示标签、时间、尺度和可用区域。通用组件不绑定学校数据或图片，可按需配合素材库中的PNG使用。修改后检查变化段与边界，最终MP4仍须完整解码。
 
 ## 验证
 

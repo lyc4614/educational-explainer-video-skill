@@ -1,0 +1,18 @@
+{
+  "id": "student-focus-01",
+  "title": "学生自主学习",
+  "file": "assets/student-focus-01.png",
+  "kind": "cutout",
+  "sha256": "602fc1b5e613116924a89621a7085481b30cbd9e08e45568cfd0631618f8080d",
+  "width": 1254,
+  "height": 1254,
+  "bounds": {"x": 213, "y": 11, "width": 813, "height": 1220},
+  "alpha": {"zeroFraction": 0.6328679644595031, "boundsThreshold": 16},
+  "anchor": {"kind": "visible-center", "x": 619.5, "y": 621},
+  "sourceCatalog": "material-library/catalog.json#student-focus-01",
+  "sourceProject": "education-asset-expansion-20261025/v001",
+  "sourceFile": "raw/student-focus-01.png",
+  "provenance": "本会话使用内置image_gen原生生成并保留alpha；原提示词、原图与局部编辑记录本地保存，不额外推断版权保证。",
+  "publicationSelection": "用户授权本次将工程、方法及现有素材库发布到现有skill仓库；示例仅复制此PNG原字节。",
+  "cautions": "静态透明PNG；只支持整组平移、缩放、淡入，不提供关节动作、真实3D视角、连续书写或眼神追踪；不代表真实学校或学生。"
+}

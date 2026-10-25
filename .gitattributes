@@ -1,2 +1,5 @@
 # Source fingerprints refer to these exact LF bytes on every checkout platform.
 tests/fixtures/*.srt text eol=lf
+
+# Keep source subtitle fingerprints reproducible in the runnable example.
+examples/**/*.srt text eol=lf
