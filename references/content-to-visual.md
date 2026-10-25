@@ -40,6 +40,8 @@ Do not add a classroom, teacher, blackboard, dopamine label, brain diagram, or n
 
 ## Rejection questions
 
+Keep factual assertions distinct from faithful attributed quotations. Verification that a source reports a number does not verify the number's underlying truth. A quotation treatment must fit the requested reproduction, preserve visible attribution and uncertainty, and record that boundary; it cannot silently clear a pending factual assertion. Use the chart-motion reference for quantitative display and animation decisions.
+
 - Exact phrase: which exact source phrase authorizes this element or change?
 - Clearer relation: does it make the stated action, comparison, order, or cause clearer?
 - Removal test: if removed, does explanatory understanding become worse? If not, demote or delete it.

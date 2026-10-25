@@ -19,7 +19,7 @@ Honor any explicit review-profile choice. If the user has not chosen and no stri
 2. Register input paths, hashes, approved references, aspect ratio, audio contract, and factual sources.
 3. Read `references/content-to-visual.md` and create a schema-valid `production-brief.json` before scene code.
 4. Read `references/production-workflow.md` to group cues into visual paragraphs and choose sample gate A, B, or C.
-5. Read `references/visual-system.md` for 16:9 or 9:16 layout, continuity, captions, formulas, and motion. For generated PNG subjects, reusable assets, or layered 3D-style scenes, also read `references/layered-compositing.md` before generating assets.
+5. Read `references/visual-system.md` for 16:9 or 9:16 layout, continuity, captions, formulas, and motion. For generated PNG subjects, reusable assets, or layered 3D-style scenes, also read `references/layered-compositing.md` before generating assets. For quantitative charts or chart additions to an approved video, read `references/chart-motion.md` before choosing a chart or animating values.
 6. Implement with frame-driven Remotion animation and tests first.
 7. Read `references/qa-and-delivery.md`; deliver only after the selected visual-review scope and the shared final media gate pass.
 

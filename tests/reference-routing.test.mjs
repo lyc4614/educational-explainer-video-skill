@@ -11,6 +11,7 @@ const expectedReferences = [
   'references/production-workflow.md',
   'references/visual-system.md',
   'references/layered-compositing.md',
+  'references/chart-motion.md',
   'references/qa-and-delivery.md'
 ];
 const readReference = (name) => readFileSync(join(skillRoot, 'references', name), 'utf8');

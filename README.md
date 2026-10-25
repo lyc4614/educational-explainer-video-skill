@@ -54,6 +54,14 @@ node scripts/inspect-asset.mjs public/report.png --id report --kind cutout --out
 
 复用代码位于`assets/layered-primitives/`：`VisibleAsset.tsx`按可见主体定位，`motion.mjs`提供纯位姿计算，`LayeredExample.tsx`展示主体建立→停靠→已验证数据揭示。调用方提供当前稿件的素材、时间和数据；不绑定某位学生、某个院校政策或本机绝对路径。
 
+## 数据图表与已有视频迭代
+
+需要折线、柱形或饼/环形动效时，按需读取`references/chart-motion.md`：先判断趋势、同口径比较或部分与整体关系，再选择图表。没有时间序列不强画折线；不同统计范围的比例不做跨对象排名，不从旁边的人数反推分母。
+
+历史分数、门槛和原稿比例的标签在入场期间保持准确，动画只绘制路径、长度或扇区；保留年份、班型、约数和来源属性。融入已认可3D画面时，仅替换预留数据区中的旧卡片，保持主体和字幕连续。
+
+通用几何函数及SVG覆盖层在`assets/chart-primitives/`。调用方提供当前稿件的数据、原始显示标签、时间、尺度和可用区域；不携带本项目学校数据、视频、PNG素材或本机路径。修改后检查变化段与边界，最终MP4仍须完整解码。
+
 ## 验证
 
 ```powershell

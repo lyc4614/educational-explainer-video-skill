@@ -1,0 +1,2 @@
+# Source fingerprints refer to these exact LF bytes on every checkout platform.
+tests/fixtures/*.srt text eol=lf

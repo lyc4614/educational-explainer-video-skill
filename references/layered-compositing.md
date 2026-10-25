@@ -100,6 +100,8 @@ Keep source subtitles on their own layer. Insert semantic line breaks without de
 
 ## Review the new behavior
 
+For a quantitative chart overlay, consult the chart-motion reference. Import only the graph into the reserved data rectangle, suppress the previous same-region card, and preserve the source labels and qualifiers while animating geometry. Keep code-based motion components distinct from the static PNG catalog; neither a material filename nor a demo value establishes a current fact.
+
 Honor existing approval evidence using the A/B/C rules in the production workflow. An old palette approval alone does not prove the current topic/system was approved. Conversely, a same-topic refinement of previously approved assets and relationships should not trigger repeated style questions merely because it has a new filename.
 
 Review subject-motion states before final data overlays, then review the composite: entrances, maximum travel, docking, data reveals, readable holds, and both sides of each changed boundary. Test pure math/state that matters: same pose at shared boundaries, no early result before its source phrase, a pending general condition versus an institution-specific result, true alpha, bounds and exact image-copy hashes. Do not replace behavioral verification with a test that merely finds headings in this reference.
