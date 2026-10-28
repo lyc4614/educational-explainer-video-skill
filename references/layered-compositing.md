@@ -4,6 +4,8 @@ Use this reference for generated illustrations with independently moving subject
 
 ## Plan before generating
 
+Apply the semantic-fit, visual-quality and sequence-contribution checks in [explanation-design](explanation-design.md). Inspect action capability, poses and independent parts before declaring reuse sufficient or a generation queue empty. Transparency and resolution checks do not establish anatomy, art quality, diversity or explanatory value. Missing states may justify targeted generation; a familiar palette does not require all assets to be regenerated.
+
 From each semantic unit, decide what the viewer must observe: a comparison, threshold, correspondence, accumulation, state change, or choice. Assign each subject a source phrase and role. A generic object can be reused in a different role if the visible form supports it; use a live label and do not treat the original filename as factual evidence.
 
 Write a small project-local `asset-plan.json` before image generation. Include:

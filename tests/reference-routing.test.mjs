@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const testsRoot = dirname(fileURLToPath(import.meta.url));
 const skillRoot = dirname(testsRoot);
 const expectedReferences = [
+  'references/explanation-design.md',
   'references/content-to-visual.md',
   'references/production-workflow.md',
   'references/visual-system.md',

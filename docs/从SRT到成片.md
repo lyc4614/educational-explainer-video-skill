@@ -46,6 +46,8 @@ node scripts/validate-brief.mjs production-brief.json --source-root .
 
 ## 3. 规划素材依赖和空间
 
+生成前先完成“文案→解释目标→视觉关系／动作与前后状态→素材／姿态／拆层→口播时点”的对应表，再检索素材。逐项记录已有图像能做什么、缺少什么；语义贴题不能代替动作能力。另看全片相邻镜头的主体、构图与解释方式是否重复，方法见[解释设计与品质改进](解释设计与品质改进.md)。这些信息写入现有brief字段和伴随素材计划，不增加封闭schema字段。
+
 先打开 `material-library/index.html` 或读取 `material-library/catalog.json`，按本段语义检索。把计划写入项目的 `asset-plan.json`：
 
 - 每个主体是透明图层 `cutout`，还是自带背景的完整场景 `scene`；决定复用、补图或代码绘制的原因。

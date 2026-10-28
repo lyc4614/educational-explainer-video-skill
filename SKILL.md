@@ -15,6 +15,8 @@ Honor any explicit review-profile choice. If the user has not chosen and no stri
 
 ## Start here
 
+Before choosing or generating subjects, read [explanation-design](references/explanation-design.md) for action-capability checks, asset quality/diversity, and temporal explanation review. A technically valid, topic-related image is not sufficient evidence of an effective shot.
+
 1. Select and announce the review profile using the rules above.
 2. Register input paths, hashes, approved references, aspect ratio, audio contract, and factual sources.
 3. Read `references/content-to-visual.md` and create a schema-valid `production-brief.json` before scene code.

@@ -6,6 +6,8 @@ Run timeline tests, production-brief/schema validation, scene behavior tests, Ty
 
 ## Visual gate
 
+Keep semantic explanation, asset/art quality, temporal motion/readability and technical correctness as separate judgments. Use [explanation-design](explanation-design.md) to inspect progression through the opening and neighbouring shots: repeated poses/layouts, actions that merely reveal cards, and different relationships reduced to the same gate/line are warning signs. Check actual forward motion and intended-size images; do not clear these judgments using a schema, alpha measurement, still-frame count or successful decode alone. Preserve necessary reading holds rather than imposing a fixed cut rate.
+
 Both profiles inspect representative scene states, both sides of every scene boundary, and interval and boundary contact sheets. Strict Audit additionally inspects every declared `reviewFrames` entry at original resolution and denser interval evidence. Check explanatory hierarchy, legibility, caption safe area, literal formula and verified-data fidelity, character/object state, and causal continuity. For 9:16, explicitly inspect the top, center, and bottom zones, including the reserved caption band.
 
 ## Standard Efficient

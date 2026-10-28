@@ -14,6 +14,8 @@ Do not choose a visual motif until this semantic unit exists. Preserve the produ
 
 ## Admit only explanatory elements
 
+Before selecting subjects, complete the source → viewer question → relationship → visible action/before-after states → layers/poses → cue-event mapping in [explanation-design](explanation-design.md). A populated source field does not prove that an asset can perform the required action. Keep these details in the existing brief fields and companion asset plan; do not extend the closed schema.
+
 Every primary or supporting `visualElements` entry must have a `sourcePhrase` and an `explanatoryRole`. It must also declare the canonical `id`, `kind`, `visualForm`, `stateChanges`, `sceneIds`, `evidenceStatus`, `originalityNote`, and `layer`. A decorative background may establish restrained tone or separation, but it cannot substitute for a sourced explanation, compete with the primary action, or obscure captions and evidence.
 
 Prefer mappings in this order:
